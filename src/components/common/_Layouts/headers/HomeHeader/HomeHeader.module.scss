@@ -1,0 +1,15 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 56px;
+  padding: 0 16px;
+  background-color: aqua;
+
+  .loginBtn {
+    padding: 8px 16px;
+    width: 100px;
+    border: 1px solid black;
+  }
+}

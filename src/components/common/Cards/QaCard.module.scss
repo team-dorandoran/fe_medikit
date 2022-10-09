@@ -1,0 +1,42 @@
+.wrapper {
+  width: 100%;
+  height: 200px;
+  padding: 16px;
+  background-color: beige;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+
+    h1 {
+      margin-bottom: 16px;
+    }
+
+    .cardBody {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 100%;
+
+      .paragraphWrapper {
+        display: flex;
+
+        .subject {
+          font-weight: 700;
+          font-size: 20px;
+          margin-right: 12px;
+        }
+
+        .paragraph {
+        }
+      }
+    }
+
+    .cardFooter {
+      display: flex;
+      gap: 8px;
+    }
+  }
+}
