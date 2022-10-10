@@ -1,4 +1,4 @@
-import React from "react";
+import { Stack } from '@mui/system';
 import QaCard, { QaCardProps } from "./QaCard";
 
 interface QaCardListProps {
@@ -8,16 +8,16 @@ interface QaCardListProps {
 const QaCardList = ({ qaList }: QaCardListProps) => {
   const list = qaList.map(qa => (
     <QaCard
-      key={qa.q + qa.a}
+      key={qa.question + qa.answer}
       category={qa.category}
-      q={qa.q}
-      a={qa.a}
-      answers={qa.answers}
+      question={qa.question}
+      answer={qa.answer}
+      answerNum={qa.answerNum}
       likes={qa.likes}
     />
   ));
 
-  return <>{list}</>;
+  return <Stack spacing={10}>{list}</Stack>;
 };
 
 export default QaCardList;
