@@ -17,6 +17,7 @@ body {
   width: 414px;
   height: 896px;
   border: solid black 1px;
+  background-color: #f7f8f9;
 
   @supports (-webkit-touch-callout: none) {
     min-height: -webkit-fill-available;

@@ -1,8 +1,8 @@
-import { Stack } from '@mui/system';
-import QaCard, { QaCardProps } from "./QaCard";
+import { Stack } from '@mui/system'
+import QaCard, { QaCardProps } from './QaCard'
 
 interface QaCardListProps {
-  qaList: QaCardProps[];
+  qaList: QaCardProps[]
 }
 
 const QaCardList = ({ qaList }: QaCardListProps) => {
@@ -14,10 +14,11 @@ const QaCardList = ({ qaList }: QaCardListProps) => {
       answer={qa.answer}
       answerNum={qa.answerNum}
       likes={qa.likes}
+      isLiked={qa.isLiked}
     />
-  ));
+  ))
 
-  return <Stack spacing={10}>{list}</Stack>;
-};
+  return <Stack spacing={10}>{list}</Stack>
+}
 
-export default QaCardList;
+export default QaCardList

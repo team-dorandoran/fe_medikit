@@ -1,15 +1,19 @@
-import { HTMLAttributes, ReactNode } from 'react';
+import { styled } from 'styles/globalStitches'
 
-interface Props extends HTMLAttributes<HTMLDivElement> {
-    children?: ReactNode;
-}
+const Row = styled('div', {
+  display: 'flex',
+  flexDirection: 'row',
+  variants: {
+    justify: {
+      center: { justifyContent: 'center' },
+      spaceBetween: { justifyContent: 'space-between' },
+      spaceAround: { justifyContent: 'space-around' },
+      spaceEvenly: { justifyContent: 'space-evenly' },
+    },
+    align: {
+      center: { alignItems: 'center' },
+    },
+  },
+})
 
-const Row = ({ children, className }: Props) => {
-    return (
-        <div style={{ display: 'flex', flexDirection: 'row' }} className={className && className}>
-            {children}
-        </div>
-    );
-};
-
-export default Row;
+export default Row

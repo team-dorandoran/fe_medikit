@@ -8,10 +8,10 @@ const nextConfig = {
     includePaths: [path.join(__dirname, "styles")],
   },
   webpack(config) {
-    config.module.rules.push({
+    config.module.rules.unshift({
       test: /\.svg$/,
       use: ["@svgr/webpack"],
-      issuer: /\.[jt]sx?$/,
+      // issuer: /\.[jt]sx?$/,
     });
 
     return config;
