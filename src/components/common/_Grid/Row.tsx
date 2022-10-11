@@ -13,6 +13,9 @@ const Row = styled('div', {
     align: {
       center: { alignItems: 'center' },
     },
+    direction: {
+      reverse: { flexDirection: 'row-reverse' },
+    },
   },
 })
 

@@ -33,11 +33,16 @@ const QaCard = ({
             {category}
           </Text>
           <Question>
-            <IconQ />{' '}
+            <IconQ />
             <Text size="body1" weight="semiBold">
               {question}
             </Text>
           </Question>
+          <Row direction="reverse">
+            <Text size="body3" color="tertiary">
+              6일 전
+            </Text>
+          </Row>
           <Answer>
             <IconA /> <Text size="body1">{answer}</Text>
           </Answer>
