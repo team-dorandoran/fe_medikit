@@ -1,5 +1,5 @@
-import { Card, CardContent, Modal } from '@mui/material';
-import { ReactNode } from 'react';
+import { Card, CardContent, Modal } from '@mui/material'
+import { ReactNode } from 'react'
 
 interface ModlaProps {
   open: boolean
@@ -9,7 +9,13 @@ interface ModlaProps {
   children: ReactNode
 }
 
-const CustomModal = ({ open, handleClose, ariaLabel, ariaDescribedBy, children }: ModlaProps) => {
+const CustomModal = ({
+  open,
+  handleClose,
+  ariaLabel,
+  ariaDescribedBy,
+  children,
+}: ModlaProps) => {
   return (
     <Modal
       open={open}
@@ -17,13 +23,19 @@ const CustomModal = ({ open, handleClose, ariaLabel, ariaDescribedBy, children }
       aria-labelledby={ariaLabel}
       aria-describedby={ariaDescribedBy}
     >
-      <Card style={{ position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} sx={{ minWidth: 275 }}>
-        <CardContent>
-          {children}
-        </CardContent>
+      <Card
+        style={{
+          position: 'fixed',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+        }}
+        sx={{ minWidth: 275 }}
+      >
+        <CardContent>{children}</CardContent>
       </Card>
-    </Modal >
-  );
-};
+    </Modal>
+  )
+}
 
-export default CustomModal;
+export default CustomModal

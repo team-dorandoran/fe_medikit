@@ -37,12 +37,11 @@ const QaCard = ({
             <Text size="body1" weight="semiBold">
               {question}
             </Text>
-          </Question>
-          <Row direction="reverse">
-            <Text size="body3" color="tertiary">
+            <Date size="body3" color="tertiary">
               6일 전
-            </Text>
-          </Row>
+            </Date>
+          </Question>
+
           <Answer>
             <IconA /> <Text size="body1">{answer}</Text>
           </Answer>
@@ -88,6 +87,8 @@ const QaCard = ({
 
 export default QaCard
 
+// STYLE ///////////////
+
 const Question = styled('div', {
   '& svg': {
     display: 'inline-block',
@@ -95,6 +96,7 @@ const Question = styled('div', {
     marginRight: '5px',
   },
   display: 'flex',
+  position: 'relative',
   alignItems: 'center',
   height: 'auto',
 })
@@ -108,4 +110,10 @@ const Answer = styled('div', {
   display: 'flex',
   alignItems: 'center',
   height: 'auto',
+})
+
+const Date = styled(Text, {
+  position: 'absolute',
+  right: '0',
+  top: '100%',
 })

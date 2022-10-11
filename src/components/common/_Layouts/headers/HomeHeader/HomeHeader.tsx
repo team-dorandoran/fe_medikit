@@ -1,13 +1,25 @@
-import Button from "components/common/Button";
-import styles from "./HomeHeader.module.scss";
+import Link from 'next/link'
+
+import Row from 'components/common/_Grid/Row'
+
+import { styled } from 'styles/globalStitches'
+
+import Logo from 'assets/svg/logo.svg'
 
 const HomeHeader = () => {
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.logo}>logo</div>
-      <Button className={styles.loginBtn}>로그인</Button>
-    </div>
-  );
-};
+    <Wrapper>
+      <Logo />
+      <Link href="/signin">로그인</Link>
+    </Wrapper>
+  )
+}
 
-export default HomeHeader;
+const Wrapper = styled(Row, {
+  width: '100%',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  height: '60px',
+})
+
+export default HomeHeader

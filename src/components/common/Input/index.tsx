@@ -1,28 +1,32 @@
-/* eslint-disable object-shorthand */
-import { InputHTMLAttributes, ReactNode } from "react";
-import styles from "./Input.module.scss";
+import { styled } from 'styles/globalStitches'
+import IconSearch from 'assets/svg/iconSearch.svg'
 
-interface Props extends InputHTMLAttributes<HTMLInputElement> {
-  className?: string;
-}
+const SearchBar = () => {
+  const InputWrapper = styled('div', {
+    position: 'relative',
+    width: '100%',
+  })
 
-interface InputWrapperProps {
-  sufix?: ReactNode;
-  prefix?: ReactNode;
-}
+  const Input = styled('input', {
+    width: '100%',
+    padding: '9px 20px',
+    borderRadius: '20px',
+    border: '1px solid $primary',
+  })
 
-const Input = (props: Props, { prefix, sufix }: InputWrapperProps) => {
-  const { className } = props;
+  const CustomIconSearch = styled(IconSearch, {
+    position: 'absolute',
+    right: '10px',
+    top: '50%',
+    transform: 'translate(-50%, -50%)',
+  })
+
   return (
-    <div className={styles.inputWrapper}>
-      {prefix && prefix}
-      <input
-        {...props}
-        className={`${styles.input} ${className && className}`}
-      />
-      {sufix && sufix}
-    </div>
-  );
-};
+    <InputWrapper>
+      <Input placeholder="어떻게 아프신가요?" />
+      <CustomIconSearch />
+    </InputWrapper>
+  )
+}
 
-export default Input;
+export default SearchBar

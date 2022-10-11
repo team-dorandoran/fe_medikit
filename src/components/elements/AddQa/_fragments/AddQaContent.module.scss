@@ -1,0 +1,24 @@
+.wrapper {
+  padding: 0 20px;
+  min-height: calc((var(--vh) * 100) - 89px);
+
+  .contentBox {
+    gap: 10px;
+    flex: 1;
+
+    .title {
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .content {
+      font-weight: 400;
+    }
+  }
+
+  .drawer {
+    width: 100%;
+    height: auto;
+    margin-top: auto;
+  }
+}

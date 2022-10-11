@@ -1,10 +1,11 @@
-import HomeHeader from "../../headers/HomeHeader/HomeHeader";
-import styles from "./HomeLayout.module.scss";
+import { styled } from 'styles/globalStitches'
+import HomeHeader from '../../headers/HomeHeader/HomeHeader'
+import styles from './HomeLayout.module.scss'
 
 interface HomeLayoutProps {
-  header?: JSX.Element;
-  footer?: JSX.Element;
-  content?: JSX.Element;
+  header?: JSX.Element
+  footer?: JSX.Element
+  content?: JSX.Element
 }
 
 const HomeLayout = ({
@@ -14,12 +15,19 @@ const HomeLayout = ({
   content,
 }: HomeLayoutProps) => {
   return (
-    <>
+    <Wrapper>
       {header}
-      <div className={styles.contentWrapper}>{content}</div>
+      <div>{content}</div>
       {footer}
-    </>
-  );
-};
+    </Wrapper>
+  )
+}
 
-export default HomeLayout;
+export default HomeLayout
+
+// STYLE  ////////////////////////////
+const Wrapper = styled('div', {
+  width: '100%',
+  padding: '20px',
+  backgroundColor: '#f7f8f9',
+})

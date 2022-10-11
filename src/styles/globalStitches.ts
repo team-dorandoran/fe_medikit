@@ -3,6 +3,8 @@ import { createStitches } from '@stitches/react'
 export const { styled, css } = createStitches({
   theme: {
     colors: {
+      primary: '#50D87D',
+
       // GrayScale
       GRAY9: '#0a0a0a',
       GRAY8: '#1b1d1f',
@@ -36,9 +38,13 @@ export const { styled, css } = createStitches({
       3: '15px',
     },
     fontSizes: {
-      1: '12px',
-      2: '13px',
-      3: '15px',
+      H1: '32px',
+      H2: '26px',
+      H4: '18px',
+      BODY1: '15px',
+      BODY2: '12px',
+      BODY3: '11px',
+      CAPTION: '10px',
     },
     fonts: {
       untitled: 'Untitled Sans, apple-system, sans-serif',
