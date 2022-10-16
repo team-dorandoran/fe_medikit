@@ -44,6 +44,15 @@ const Button = styled(ButtonBase, {
         },
       },
     },
+    default: {
+      true: {
+        backgroundColor: 'transparent',
+        color: '$secondary_text',
+        fontSize: '$BODY2',
+        padding: '0px',
+        border: 'none',
+      },
+    },
   },
   defaultVariants: {
     color: 'primary',
