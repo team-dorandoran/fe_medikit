@@ -5,6 +5,7 @@ import Col from 'components/common/_Grid/Col'
 import styles from './AddQaContent.module.scss'
 import SelectBox from 'components/common/SelectBox'
 import Button from 'components/common/Button'
+import { styled } from 'styles/globalStitches'
 
 const AddQaContent = () => {
   const [title, setTitle] = useState('')
@@ -49,3 +50,9 @@ const AddQaContent = () => {
 }
 
 export default AddQaContent
+
+// STYLE ///////////////////
+
+const TitleInput = styled('input', {
+  color: '$secondary_text',
+})
