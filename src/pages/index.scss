@@ -1,8 +1,7 @@
 #__next {
-  /* width: 100vw;
-  min-height: 100vh; */
-  width: 390px;
-  height: 844px;
+  width: 100vw;
+  min-height: 100vh;
+
   background-color: red;
   overflow: scroll;
   @supports (-webkit-touch-callout: none) {

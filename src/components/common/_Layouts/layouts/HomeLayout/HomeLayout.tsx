@@ -1,6 +1,5 @@
 import { styled } from 'styles/globalStitches'
 import HomeHeader from '../../headers/HomeHeader/HomeHeader'
-import styles from './HomeLayout.module.scss'
 
 interface HomeLayoutProps {
   header?: JSX.Element
@@ -9,7 +8,6 @@ interface HomeLayoutProps {
 }
 
 const HomeLayout = ({
-  //
   header = <HomeHeader />,
   footer,
   content,
@@ -28,6 +26,7 @@ export default HomeLayout
 // STYLE  ////////////////////////////
 const Wrapper = styled('div', {
   width: '100%',
+  height: '100%',
   padding: '20px',
   backgroundColor: '#f7f8f9',
 })

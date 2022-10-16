@@ -30,6 +30,20 @@ const Button = styled(ButtonBase, {
         backgroundColor: 'transparent',
       },
     },
+    badge: {
+      true: {
+        color: '$primary_text',
+        backgroundColor: '$GRAY2',
+        padding: '10px 16px',
+        borderRadius: '17px',
+        fontWeight: '600',
+
+        '& svg': {
+          width: '14px',
+          height: '14px',
+        },
+      },
+    },
   },
   defaultVariants: {
     color: 'primary',
