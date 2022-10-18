@@ -1,7 +1,7 @@
 import { styled } from 'styles/globalStitches'
 
 const Col = styled('div', {
-  diplay: 'flex',
+  display: 'flex',
   flexDirection: 'column',
   variants: {
     justify: {

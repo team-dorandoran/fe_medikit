@@ -8,6 +8,7 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 15px;
+  color: '#1b1d1f';
 }
 
 #__next {
@@ -172,4 +173,9 @@ q::after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+button {
+  background-color: transparent;
+  border: none;
 }

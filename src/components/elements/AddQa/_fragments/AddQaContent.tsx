@@ -1,50 +1,62 @@
-import React, { ChangeEvent, useState } from 'react'
+import { ChangeEvent, useState } from 'react'
 
 import Col from 'components/common/_Grid/Col'
 
-import styles from './AddQaContent.module.scss'
-import SelectBox from 'components/common/SelectBox'
 import Button from 'components/common/Button'
 import { styled } from 'styles/globalStitches'
+import Text from 'components/common/Text'
+import CategoryDrawer from './CategoryDrawer'
+import IconCaret from 'assets/svg/iconCaret.svg'
 
 const AddQaContent = () => {
   const [title, setTitle] = useState('')
   const [content, setContent] = useState('')
+  const [open, setOpen] = useState(false)
+  const [category, setCategory] = useState('')
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     const { subject } = e.currentTarget.dataset
     subject === 'title' && setTitle(e.currentTarget.value)
     subject === 'content' && setContent(e.currentTarget.value)
   }
 
   return (
-    <Col className={styles.wrapper}>
-      <Col className={styles.contentBox}>
-        <input
-          className={styles.title}
+    <Col>
+      <ContentWrapper>
+        <TitleInput
           placeholder="증상을 한 문장으로 요약해 주세요"
           data-subject="title"
           type="text"
           value={title}
           onChange={handleChange}
         />
-        <input
-          className={styles.content}
+        <ContentArea
           placeholder="증상을 자세히 작성해 주세요"
           data-subject="content"
-          type="text"
           value={content}
           onChange={handleChange}
         />
-      </Col>
+      </ContentWrapper>
 
-      <Col className={styles.drawer}>
-        <span>dd</span>
-        <SelectBox></SelectBox>
-        <span>태그</span>
-        <input type="text" />
-        <Button>질문 올리기</Button>
-      </Col>
+      <SelectionBox>
+        <Col>
+          <Text weight="bold">아픈 부위</Text>
+          <CategoryBtn onClick={() => setOpen(true)}>
+            {category}
+            <IconCaret />
+          </CategoryBtn>
+        </Col>
+        <Col css={{ marginBottom: '40px' }}>
+          <Text weight="bold">태그</Text>
+          <TagInput type="text" />
+        </Col>
+        <Button color="secondary" radii="round">
+          질문 올리기
+        </Button>
+      </SelectionBox>
+      <CategoryDrawer setCategory={setCategory} open={open} setOpen={setOpen} />
     </Col>
   )
 }
@@ -53,6 +65,65 @@ export default AddQaContent
 
 // STYLE ///////////////////
 
+const ContentWrapper = styled(Col, {
+  ['& input']: {
+    color: '$secondary_text',
+    border: 'none',
+    backgroundColor: 'transparent',
+  },
+})
+
+const SelectionBox = styled(Col, {
+  position: 'fixed',
+  left: '0',
+  bottom: '20px',
+  width: '100%',
+  backgroundColor: '$white',
+  gap: '24px',
+  padding: '24px 20px 0',
+
+  ['& span']: {
+    marginBottom: '6px',
+  },
+
+  ['& button']: {
+    display: 'flex',
+    border: '1px solid $GRAY2',
+  },
+})
+
 const TitleInput = styled('input', {
+  fontSize: '$H4',
+  fontWeight: '$bold',
+  marginBottom: '20px',
+})
+
+const ContentArea = styled('textarea', {
+  fontSize: '$BODY1',
+  fontFamily: 'Pretandard',
+  backgroundColor: 'transparent',
+  resize: 'none',
+  border: 'none',
+})
+
+const CategoryBtn = styled('button', {
+  position: 'relative',
+  display: 'flex',
+  alignItems: 'center',
   color: '$secondary_text',
+  height: '48px',
+  padding: '12px 16px',
+
+  ['& svg']: {
+    position: 'absolute',
+    right: '12px',
+    rotate: '270deg',
+  },
+})
+
+const TagInput = styled('input', {
+  border: 'solid 1px $GRAY6',
+  height: '47px',
+  padding: '12px 16px',
+  borderRadius: '4px',
 })

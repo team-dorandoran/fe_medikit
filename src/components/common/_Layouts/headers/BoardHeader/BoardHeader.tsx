@@ -1,18 +1,41 @@
-import Row from 'components/common/_Grid/Row'
+import { styled } from 'styles/globalStitches'
 
-import styles from './BoardHeader.module.scss'
-
+import IconBack from 'assets/svg/iconBack.svg'
 interface BoardHeaderProps {
   title?: string
 }
 
 const BoardHeader = ({ title }: BoardHeaderProps) => {
   return (
-    <Row className={styles.wrapper}>
-      <button></button>
+    <Wrapper>
+      <button>
+        <IconBack />
+      </button>
       <h1>{title}</h1>
-    </Row>
+    </Wrapper>
   )
 }
 
 export default BoardHeader
+
+const Wrapper = styled('header', {
+  position: 'relative',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  height: '57px',
+
+  ['button']: {
+    position: 'absolute',
+    top: '50%',
+    left: '20px',
+    background: 'transparent',
+    border: 'none',
+    padding: '0px',
+    transform: 'translate(-50%, -50%)',
+  },
+
+  ['h1']: {
+    fontSize: '$H4',
+  },
+})
