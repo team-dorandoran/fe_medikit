@@ -9,6 +9,13 @@ body {
   align-items: center;
   font-size: 15px;
   color: '#1b1d1f';
+
+  touch-action: pan-y;
+
+  .MuiPaper-root {
+    height: calc(50% - 20px);
+    overflow: visible;
+  }
 }
 
 #__next {
@@ -178,4 +185,5 @@ table {
 button {
   background-color: transparent;
   border: none;
+  color: black;
 }

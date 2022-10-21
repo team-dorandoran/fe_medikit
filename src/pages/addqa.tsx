@@ -1,8 +1,7 @@
-import AddQa from 'components/elements/AddQa';
-import React from 'react';
+import AddQa from 'components/elements/AddQa'
 
 const addQa = () => {
-    return AddQa();
-};
+  return AddQa()
+}
 
-export default addQa;
+export default addQa
