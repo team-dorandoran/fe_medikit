@@ -124,9 +124,6 @@ const ContentWrapper = styled(Col, {
 })
 
 const SelectionBox = styled(Col, {
-  position: 'fixed',
-  left: '0',
-  bottom: '20px',
   width: '100%',
   backgroundColor: '$white',
   gap: '24px',
