@@ -3,7 +3,7 @@ import { createStitches } from '@stitches/react'
 export const { styled, css } = createStitches({
   theme: {
     colors: {
-      primary: '#50D87D',
+      primary: '#429AEB',
 
       // GrayScale
       GRAY9: '#0a0a0a',
@@ -28,9 +28,12 @@ export const { styled, css } = createStitches({
       white: '#ffffff',
 
       // btn
-      primary_btn: '#1b1d1f',
-      secondary_btn: '#000000', // FIX: need to change
-      tetiary_btn: '#C9CDD2',
+      primary_btn: '#429AEB',
+      primary_pressed: '#3078CA',
+      secondary_btn: '#464C53',
+      secondary_pressed: '#26282B',
+      tertiary_btn: '#E8EBED',
+      tertiary_pressed: '#C9CDD2',
     },
     space: {
       1: '5px',

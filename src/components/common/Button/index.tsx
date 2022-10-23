@@ -4,14 +4,41 @@ import { styled } from 'styles/globalStitches'
 
 const Button = styled(ButtonBase, {
   fontWeight: 'bold',
+  '&:disabled': {
+    opacity: '0.8',
+  },
   variants: {
     color: {
-      primary: { backgroundColor: '$primary_btn', color: '$white' },
+      primary: {
+        backgroundColor: '$primary_btn',
+        color: '$white',
+        '&:active': {
+          backgroundColor: '$primary_pressed',
+        },
+        '&:hover': {
+          backgroundColor: '$primary_pressed',
+        },
+      },
       secondary: {
         backgroundColor: '$GRAY3',
         color: '$white',
+        '&:active': {
+          backgroundColor: '$secondary_pressed',
+        },
+        '&:hover': {
+          backgroundColor: '$secondary_pressed',
+        },
       },
-      tertiary: { backgroundColor: '$GRAY6', color: '$white' },
+      tertiary: {
+        backgroundColor: '$GRAY6',
+        color: '$white',
+        '&:active': {
+          backgroundColor: '$tertiary_pressed',
+        },
+        '&:hover': {
+          backgroundColor: '$tertiary_pressed',
+        },
+      },
     },
     sizes: {
       sm: { padding: '12px 20px', fontSize: '$BODY1' },
@@ -24,10 +51,38 @@ const Button = styled(ButtonBase, {
       round: { borderRadius: '30px' },
     },
     outlined: {
-      true: {
-        border: 'solid 1px black',
+      primary: {
+        border: 'solid 1px $primary',
         color: '$primary_text',
         backgroundColor: 'transparent',
+        '&:active': {
+          backgroundColor: 'rgba(217, 244, 254, 0.32)',
+        },
+        '&:hover': {
+          backgroundColor: 'rgba(217, 244, 254, 0.32)',
+        },
+      },
+      secondary: {
+        border: 'solid 1px $secondary',
+        color: '$secondary_text',
+        backgroundColor: 'transparent',
+        '&:active': {
+          backgroundColor: '$GRAY1',
+        },
+        '&:hover': {
+          backgroundColor: '$GRAY1',
+        },
+      },
+      tertiary: {
+        border: 'solid 1px $tertiary',
+        color: '$tertiary_text',
+        backgroundColor: 'transparent',
+        '&:active': {
+          backgroundColor: '$GTRANS1',
+        },
+        '&:hover': {
+          backgroundColor: '$GTRANS1',
+        },
       },
     },
     badge: {
