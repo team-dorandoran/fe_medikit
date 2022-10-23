@@ -1,4 +1,3 @@
-import BoardHeader from '../../headers/HomeHeader/HomeHeader'
 import styles from './BoardLayout.module.scss'
 
 interface HomeLayoutProps {

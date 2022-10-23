@@ -4,6 +4,7 @@ import { styled } from 'styles/globalStitches'
 
 const Button = styled(ButtonBase, {
   fontWeight: 'bold',
+  transition: 'all 0.3s ease',
   '&:disabled': {
     opacity: '0.8',
   },

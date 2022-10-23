@@ -1,11 +1,14 @@
 import { Fab } from '@mui/material'
 import IconWrite from 'assets/svg/iconWrite.svg'
+import Link from 'next/link'
 
 const FloatingBtn = () => {
   return (
-    <Fab color="primary" aria-label="add">
-      <IconWrite />
-    </Fab>
+    <Link href="/addqa">
+      <Fab color="primary" aria-label="add">
+        <IconWrite />
+      </Fab>
+    </Link>
   )
 }
 

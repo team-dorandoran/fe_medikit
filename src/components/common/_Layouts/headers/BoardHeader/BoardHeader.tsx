@@ -1,4 +1,5 @@
 import { styled } from 'styles/globalStitches'
+import { useRouter } from 'next/router'
 
 import IconBack from 'assets/svg/iconBack.svg'
 interface BoardHeaderProps {
@@ -6,9 +7,11 @@ interface BoardHeaderProps {
 }
 
 const BoardHeader = ({ title }: BoardHeaderProps) => {
+  const router = useRouter()
+
   return (
     <Wrapper>
-      <button>
+      <button onClick={() => router.back()}>
         <IconBack />
       </button>
       <h1>{title}</h1>
@@ -33,6 +36,7 @@ const Wrapper = styled('header', {
     border: 'none',
     padding: '0px',
     transform: 'translate(-50%, -50%)',
+    cursor: 'pointer',
   },
 
   ['h1']: {
