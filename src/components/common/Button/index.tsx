@@ -6,7 +6,7 @@ const Button = styled(ButtonBase, {
   fontWeight: 'bold',
   transition: 'all 0.3s ease',
   '&:disabled': {
-    opacity: '0.8',
+    opacity: '0.64',
   },
   variants: {
     color: {
@@ -14,30 +14,30 @@ const Button = styled(ButtonBase, {
         backgroundColor: '$primary_btn',
         color: '$white',
         '&:active': {
-          backgroundColor: '$primary_pressed',
+          backgroundColor: '$BLUE6',
         },
         '&:hover': {
-          backgroundColor: '$primary_pressed',
+          backgroundColor: '$BLUE6',
         },
       },
       secondary: {
-        backgroundColor: '$GRAY3',
-        color: '$white',
-        '&:active': {
-          backgroundColor: '$secondary_pressed',
-        },
-        '&:hover': {
-          backgroundColor: '$secondary_pressed',
-        },
-      },
-      tertiary: {
         backgroundColor: '$GRAY6',
         color: '$white',
         '&:active': {
-          backgroundColor: '$tertiary_pressed',
+          backgroundColor: '$GRAY7',
         },
         '&:hover': {
-          backgroundColor: '$tertiary_pressed',
+          backgroundColor: '$GRAY7',
+        },
+      },
+      tertiary: {
+        backgroundColor: '$GRAY2',
+        color: '$GRAY6',
+        '&:active': {
+          backgroundColor: '$GRAY3',
+        },
+        '&:hover': {
+          backgroundColor: '$GRAY3',
         },
       },
     },
@@ -93,6 +93,12 @@ const Button = styled(ButtonBase, {
         padding: '10px 16px',
         borderRadius: '17px',
         fontWeight: '600',
+        '&:active': {
+          backgroundColor: '$tertiary_pressed',
+        },
+        '&:hover': {
+          backgroundColor: '$tertiary_pressed',
+        },
 
         '& svg': {
           width: '14px',

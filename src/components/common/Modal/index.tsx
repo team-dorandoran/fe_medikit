@@ -1,7 +1,7 @@
 import { Card, CardContent, Modal } from '@mui/material'
 import { ReactNode } from 'react'
 
-interface ModlaProps {
+interface ModalProps {
   open: boolean
   handleClose: () => void
   ariaLabel?: string
@@ -15,7 +15,7 @@ const CustomModal = ({
   ariaLabel,
   ariaDescribedBy,
   children,
-}: ModlaProps) => {
+}: ModalProps) => {
   return (
     <Modal
       open={open}

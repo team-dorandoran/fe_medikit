@@ -1,17 +1,21 @@
 import { styled } from 'styles/globalStitches'
 import IconSearch from 'assets/svg/iconSearch.svg'
+import Link from 'next/link'
 
 const SearchBar = () => {
   const InputWrapper = styled('div', {
     position: 'relative',
+    display: 'flex',
     width: '100%',
+    cursor: 'pointer',
   })
 
-  const Input = styled('input', {
+  const Search = styled('span', {
     width: '100%',
     padding: '9px 20px',
     borderRadius: '20px',
     border: '1px solid $primary',
+    color: '$tertiary_text',
   })
 
   const CustomIconSearch = styled(IconSearch, {
@@ -22,10 +26,12 @@ const SearchBar = () => {
   })
 
   return (
-    <InputWrapper>
-      <Input placeholder="어떻게 아프신가요?" />
-      <CustomIconSearch />
-    </InputWrapper>
+    <Link href="/search">
+      <InputWrapper>
+        <Search>어떻게 아프신가요?</Search>
+        <CustomIconSearch />
+      </InputWrapper>
+    </Link>
   )
 }
 

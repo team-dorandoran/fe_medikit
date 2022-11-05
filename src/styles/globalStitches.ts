@@ -16,6 +16,16 @@ export const { styled, css } = createStitches({
       GRAY2: '#e8ebed',
       GRAY1: '#f7f8f9',
 
+      BLUE9: '#0C2C70',
+      BLUE8: '#153F88',
+      BLUE7: '#2159A9',
+      BLUE6: '#3078CA',
+      BLUE5: '#429AEB',
+      BLUE4: '#6FBAF3',
+      BLUE3: '#8DD0F9',
+      BLUE2: '#B4E5FD',
+      BLUE1: '#D9F4FE',
+
       GTRANS4: 'rgba(176, 179, 188, 0.7)',
       GTRANS3: 'rgba(176, 179, 188, 0.5)',
       GTRANS2: 'rgba(176, 179, 188, 0.3)',
