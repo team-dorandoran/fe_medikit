@@ -15,11 +15,17 @@ const HomeHeader = () => {
   )
 }
 
+export default HomeHeader
+
+// STYLE /////////////////////////////
 const Wrapper = styled(Row, {
   width: '100%',
   justifyContent: 'space-between',
   alignItems: 'center',
   height: '60px',
-})
 
-export default HomeHeader
+  '& a': {
+    color: '$secondary_text',
+    fontSize: '$BODY1',
+  },
+})

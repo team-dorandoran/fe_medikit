@@ -1,3 +1,4 @@
+import { CSS } from '@stitches/react'
 import Image from 'next/image'
 import Button from '../Button'
 
@@ -5,12 +6,13 @@ interface BadgeProps {
   title: string
   icon?: string
   iconPosition: 'suffix' | 'prefix'
+  css?: CSS
 }
 
-const Badge = ({ title, icon, iconPosition }: BadgeProps) => {
+const Badge = ({ title, icon, iconPosition, css }: BadgeProps) => {
   const iconGap = iconPosition === 'prefix' ? '0 0 0 6px' : '0 6px 0 0'
   return (
-    <Button badge>
+    <Button css={css} badge>
       {iconPosition === 'prefix' && (
         <Image width="14px" height="14px" src={'/iconExample.svg'} alt="icon" />
       )}

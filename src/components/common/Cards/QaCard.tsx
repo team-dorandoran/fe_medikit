@@ -41,10 +41,11 @@ const QaCard = ({
               6일 전
             </Date>
           </Question>
-
-          <Answer>
-            <IconA /> <Text size="body1">{answer}</Text>
-          </Answer>
+          {answer && (
+            <Answer>
+              <IconA /> <Text size="body1">{answer}</Text>
+            </Answer>
+          )}
           <Row css={{ gap: '5px' }}>
             <Row
               align="center"

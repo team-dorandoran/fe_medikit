@@ -4,26 +4,34 @@ import QaCardList from 'components/common/Cards/QaCardList'
 import FloatingBtn from 'components/common/FloatingBtn'
 import SearchBar from 'components/common/Input'
 import { styled } from 'styles/globalStitches'
+import RecentKeyword from './RecentKeyword'
+import RecentQuestion from './RecentQuestion'
+import { Title } from './_style'
 
 const HomePageContent = () => {
   return (
-    <Wrapper>
-      <SearchBar />
-      <QaWrapper>
-        <QaCardList qaList={example} />
-      </QaWrapper>
-      <Button
-        css={{ marginTop: '10px' }}
-        sizes="md"
-        radii="round"
-        color="secondary"
-      >
-        추천 메디킷 더보기
-      </Button>
-      <FloatingBtnWrapper>
-        <FloatingBtn />
-      </FloatingBtnWrapper>
-    </Wrapper>
+    <>
+      <Wrapper>
+        <SearchBar />
+        <QaWrapper>
+          <Title>추천 메디킷</Title>
+          <QaCardList qaList={example} />
+        </QaWrapper>
+        <Button
+          css={{ marginTop: '10px' }}
+          sizes="md"
+          radii="round"
+          color="secondary"
+        >
+          추천 메디킷 더보기
+        </Button>
+        <FloatingBtnWrapper>
+          <FloatingBtn />
+        </FloatingBtnWrapper>
+      </Wrapper>
+      <RecentKeyword />
+      <RecentQuestion />
+    </>
   )
 }
 
