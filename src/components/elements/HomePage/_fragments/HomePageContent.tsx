@@ -16,7 +16,7 @@ const HomePageContent = () => {
         css={{ marginTop: '10px' }}
         sizes="md"
         radii="round"
-        color="tertiary"
+        color="secondary"
       >
         추천 메디킷 더보기
       </Button>
