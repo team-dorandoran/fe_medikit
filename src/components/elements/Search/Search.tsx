@@ -1,7 +1,7 @@
 import SearchContent from './_fragments/SearchContent'
 
-const HomePage = () => {
+const Search = () => {
   return <SearchContent />
 }
 
-export default HomePage
+export default Search

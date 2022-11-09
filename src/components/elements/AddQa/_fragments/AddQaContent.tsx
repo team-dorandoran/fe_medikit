@@ -4,22 +4,14 @@ import Col from 'components/common/_Grid/Col'
 
 import Button from 'components/common/Button'
 import { styled } from 'styles/globalStitches'
-import Text from 'components/common/Text'
-import CategoryDrawer from './CategoryDrawer'
-import IconCaret from 'assets/svg/iconCaret.svg'
-import { Box } from '@mui/material'
-import TagBox from './TagBox'
 import Row from 'components/common/_Grid/Row'
+import { useRouter } from 'next/router'
 
 const AddQaContent = () => {
-  const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent)
-
   const [title, setTitle] = useState('')
   const [content, setContent] = useState('')
 
-  const [open, setOpen] = useState(false)
-  const [category, setCategory] = useState('')
-  const [openDrawer, setOpenDrawer] = useState(true)
+  const router = useRouter()
 
   const handleChangeContent = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -29,8 +21,8 @@ const AddQaContent = () => {
     subject === 'content' && setContent(e.currentTarget.value)
   }
 
-  const toggleDrawer = (newOpen: boolean) => () => {
-    setOpenDrawer(newOpen)
+  const handleFinish = () => {
+    router.push('/selectcategory')
   }
 
   return (
@@ -49,16 +41,7 @@ const AddQaContent = () => {
           onChange={handleChangeContent}
         />
       </ContentWrapper>
-      <SelectionBox>
-        <Col>
-          <Text weight="bold">아픈 부위</Text>
-          <CategoryWrapper />
-        </Col>
-        <Col css={{ marginBottom: '40px' }}>
-          <Text weight="bold">태그</Text>
-          <TagBox />
-        </Col>
-      </SelectionBox>
+
       <Row
         css={{
           width: '100%',
@@ -80,6 +63,7 @@ const AddQaContent = () => {
           임시 저장
         </Button>
         <Button
+          onClick={handleFinish}
           css={{
             width: '100%',
             flex: 1,
@@ -89,7 +73,6 @@ const AddQaContent = () => {
           작성 완료
         </Button>
       </Row>
-      <CategoryDrawer setCategory={setCategory} open={open} setOpen={setOpen} />
     </Col>
   )
 }
@@ -106,15 +89,6 @@ const ContentWrapper = styled(Col, {
     border: 'none',
     backgroundColor: 'transparent',
   },
-})
-
-const SelectionBox = styled(Col, {
-  flex: '1',
-  width: '100%',
-  height: '100%',
-  backgroundColor: '$white',
-  gap: '24px',
-  padding: '24px 20px 0',
 })
 
 const TitleInput = styled('textarea', {
@@ -134,15 +108,4 @@ const ContentArea = styled('textarea', {
   backgroundColor: 'transparent',
   resize: 'none',
   border: 'none',
-})
-
-const CategoryWrapper = styled(Row, {
-  width: '100%',
-  marginTop: '6px',
-  minHeight: '47px',
-  border: '1px solid $GRAY2',
-  borderRadius: '4px',
-  gap: '2px',
-  padding: '12px 16px',
-  fontSize: '15px',
 })
