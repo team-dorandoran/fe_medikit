@@ -3,30 +3,42 @@ import Text from 'components/common/Text'
 import Col from 'components/common/_Grid/Col'
 import Row from 'components/common/_Grid/Row'
 import TagBox from 'components/elements/AddQa/_fragments/TagBox'
-import { useState } from 'react'
+import { ChangeEvent, useRef, useState } from 'react'
 import { styled } from 'styles/globalStitches'
 import PainSpotList from './PainSpotList'
 
 const SelectCategoryContent = () => {
+  const [selectedCategory, setSelectedCategory] = useState<string | undefined>()
   const [open, setOpen] = useState(false)
+  const contentRef = useRef<HTMLUListElement>(null)
 
   const handleFocus = () => {
     setOpen(true)
   }
-  const handleBlur = () => {
-    setOpen(false)
-  }
 
   const handleFinish = () => {
     console.log('finish')
+  }
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setSelectedCategory(e.currentTarget.value)
   }
 
   return (
     <SelectionBox>
       <Col css={{ position: 'relative' }}>
         <Text weight="bold">아픈 부위</Text>
-        <CategoryWrapper onFocus={handleFocus} onBlur={handleBlur} />
-        <PainSpotList open={open} />
+        <CategoryWrapper
+          placeholder="아픈 부위를 입력해 주세요"
+          onFocus={handleFocus}
+          value={selectedCategory}
+          onChange={handleChange}
+        />
+        <PainSpotList
+          contentRef={contentRef}
+          setOpen={setOpen}
+          setSelectedCategory={setSelectedCategory}
+          open={open}
+        />
       </Col>
       <Col css={{ marginBottom: '40px' }}>
         <Text weight="bold">태그</Text>

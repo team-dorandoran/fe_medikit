@@ -26,6 +26,7 @@
     "sass": "^1.55.0"
   },
   "devDependencies": {
+    "@radix-ui/react-popover": "^1.0.2",
     "@svgr/webpack": "^6.4.0",
     "@types/node": "18.8.3",
     "@types/react": "18.0.21",
