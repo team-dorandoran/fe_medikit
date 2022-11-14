@@ -1,5 +1,5 @@
 import { Divider, List, ListItem } from '@mui/material'
-import React, { Dispatch, MouseEvent, useEffect } from 'react'
+import React, { Dispatch, MouseEvent } from 'react'
 import { styled } from 'styles/globalStitches'
 
 interface PainSpotListProps {
@@ -20,14 +20,13 @@ const PainSpotList = ({
 
   const handleClick = (e: MouseEvent<HTMLLIElement>) => {
     const text = e.currentTarget.dataset.text as string
-
     setSelectedCategory(text && text)
     setOpen(false)
   }
 
   const list = testArr.map((v, idx) => (
     <React.Fragment key={v}>
-      <ListItem data-text={v} onClick={handleClick}>
+      <ListItem data-text={v} onMouseDown={handleClick}>
         {v}
       </ListItem>
       {idx !== testArr.length - 1 && <Divider />}
@@ -46,7 +45,7 @@ const CustomList = styled(List, {
   width: '100%',
   marginTop: '6px !important',
   padding: '0 !important',
-  backgroundColor: '$GRAY1',
+  backgroundColor: '$GRAY2',
   border: '1px solid $GRAY2',
   borderRadius: '4px',
 

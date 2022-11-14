@@ -27,6 +27,7 @@ const Wrapper = styled('header', {
   justifyContent: 'center',
   alignItems: 'center',
   height: '57px',
+  backgroundColor: '$white',
 
   ['button']: {
     position: 'absolute',
