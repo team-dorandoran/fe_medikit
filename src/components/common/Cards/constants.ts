@@ -1,5 +1,6 @@
 export const example = [
   {
+    id: '1',
     category: '무릎',
     question: '무릎이 아파요',
     answer: '아프면 병원 가세요.',
@@ -8,6 +9,7 @@ export const example = [
     isLiked: true,
   },
   {
+    id: '2',
     category: '무릎',
     question: '무릎이 아파요',
     answer: '아프면 병원 가세요.',
@@ -16,6 +18,7 @@ export const example = [
     isLiked: false,
   },
   {
+    id: '3',
     category: '무릎',
     question: '무릎이 아파요',
     answer: '아프면 병원 가세요.',

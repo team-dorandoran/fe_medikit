@@ -1,4 +1,3 @@
-import { Stack } from '@mui/material'
 import Badge from 'components/common/Badge'
 import Col from 'components/common/_Grid/Col'
 import { Title } from './_style'
@@ -12,12 +11,12 @@ const RecentKeyword = () => {
           css={{ width: 'fit-content' }}
           iconPosition="prefix"
           title="무릎이 아파요"
-        />{' '}
+        />
         <Badge
           css={{ width: 'fit-content' }}
           iconPosition="prefix"
           title="무릎이 아파요"
-        />{' '}
+        />
         <Badge
           css={{ width: 'fit-content' }}
           iconPosition="prefix"

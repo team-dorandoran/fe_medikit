@@ -1,3 +1,4 @@
+import { styled } from 'styles/globalStitches'
 import styles from './BoardLayout.module.scss'
 
 interface HomeLayoutProps {
@@ -15,10 +16,18 @@ const BoardLayout = ({
   return (
     <>
       {header}
-      <div className={styles.contentWrapper}>{content}</div>
+      <Wrapper>{content}</Wrapper>
       {footer}
     </>
   )
 }
 
 export default BoardLayout
+
+const Wrapper = styled('div', {
+  width: '100%',
+  height: 'calc(100vh - 57px)',
+  backgroundColor: '$GRAY1',
+  fontSize: '18px',
+  padding: '24px 20px',
+})
