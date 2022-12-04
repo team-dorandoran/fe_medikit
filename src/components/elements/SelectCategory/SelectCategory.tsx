@@ -6,7 +6,7 @@ const SelectCategory = () => {
   return (
     <BoardLayout
       header={<BoardHeader title="질문 작성" />}
-      content={SelectCategoryContent()}
+      content={<SelectCategoryContent />}
     />
   )
 }

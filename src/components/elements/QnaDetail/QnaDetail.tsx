@@ -6,7 +6,7 @@ const QnaDetail = () => {
   return (
     <BoardLayout
       header={<BoardHeader title="질문" />}
-      content={QnaDetailContent()}
+      content={<QnaDetailContent />}
     />
   )
 }

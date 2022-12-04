@@ -6,7 +6,7 @@ const AddQa = () => {
   return (
     <BoardLayout
       header={<BoardHeader title="질문 작성" />}
-      content={AddQaContent()}
+      content={<AddQaContent />}
     />
   )
 }
