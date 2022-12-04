@@ -2,7 +2,6 @@ import Text from 'components/common/Text'
 import Col from 'components/common/_Grid/Col'
 import Row from 'components/common/_Grid/Row'
 import {
-  IconHeart,
   IconHeartFilled,
   IconMessage,
   IconShare,
