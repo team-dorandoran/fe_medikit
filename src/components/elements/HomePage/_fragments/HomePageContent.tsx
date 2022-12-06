@@ -15,7 +15,7 @@ const HomePageContent = () => {
         <SearchBar />
         <QaWrapper>
           <Title>추천 메디킷</Title>
-          <QaCardList qaList={example} />
+          <QaCardList />
         </QaWrapper>
         <Button
           css={{ marginTop: '10px' }}
