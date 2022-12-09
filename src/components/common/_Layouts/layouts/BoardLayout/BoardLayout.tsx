@@ -1,4 +1,5 @@
 import { styled } from 'styles/globalStitches'
+
 import styles from './BoardLayout.module.scss'
 
 interface HomeLayoutProps {

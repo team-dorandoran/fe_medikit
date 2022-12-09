@@ -1,3 +1,3 @@
-import AddQa from "./AddQa";
+import AddQa from './AddQa'
 
-export default AddQa;
+export default AddQa

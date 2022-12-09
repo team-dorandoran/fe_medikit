@@ -1,6 +1,8 @@
-import { SwipeableDrawer } from '@mui/material'
 import { Dispatch, SetStateAction } from 'react'
+
+import { SwipeableDrawer } from '@mui/material'
 import { styled } from 'styles/globalStitches'
+
 import TagList from './CategoryList'
 
 interface TagDrawerProps {

@@ -1,5 +1,6 @@
-import { Divider, List, ListItem } from '@mui/material'
 import React, { Dispatch, MouseEvent } from 'react'
+
+import { Divider, List, ListItem } from '@mui/material'
 import { styled } from 'styles/globalStitches'
 
 interface PainSpotListProps {

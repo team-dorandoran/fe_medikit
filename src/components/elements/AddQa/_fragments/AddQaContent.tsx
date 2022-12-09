@@ -1,11 +1,10 @@
 import { ChangeEvent, useState } from 'react'
 
-import Col from 'components/common/_Grid/Col'
-
 import Button from 'components/common/Button'
-import { styled } from 'styles/globalStitches'
+import Col from 'components/common/_Grid/Col'
 import Row from 'components/common/_Grid/Row'
 import { useRouter } from 'next/router'
+import { styled } from 'styles/globalStitches'
 
 const AddQaContent = () => {
   const [title, setTitle] = useState('')

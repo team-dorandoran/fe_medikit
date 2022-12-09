@@ -1,9 +1,10 @@
 import Button from 'components/common/Button'
-import { example } from 'components/common/Cards/constants'
 import QaCardList from 'components/common/Cards/QaCardList'
+import { example } from 'components/common/Cards/constants'
 import FloatingBtn from 'components/common/FloatingBtn'
 import SearchBar from 'components/common/Input'
 import { styled } from 'styles/globalStitches'
+
 import RecentKeyword from './RecentKeyword'
 import RecentQuestion from './RecentQuestion'
 import { Title } from './_style'

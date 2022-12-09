@@ -1,6 +1,7 @@
-import Row from 'components/common/_Grid/Row'
 import { KeyboardEvent, MouseEvent, useState } from 'react'
+
 import IconDelete from 'assets/svg/iconDelete.svg'
+import Row from 'components/common/_Grid/Row'
 import { styled } from 'styles/globalStitches'
 
 const TagBox = () => {

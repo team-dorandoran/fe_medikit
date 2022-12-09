@@ -1,6 +1,6 @@
-import { styled } from 'styles/globalStitches'
 import IconSearch from 'assets/svg/iconSearch.svg'
 import Link from 'next/link'
+import { styled } from 'styles/globalStitches'
 
 const SearchBar = () => {
   const InputWrapper = styled('div', {

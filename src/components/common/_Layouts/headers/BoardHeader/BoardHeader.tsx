@@ -1,7 +1,7 @@
-import { styled } from 'styles/globalStitches'
-import { useRouter } from 'next/router'
 import IconBack from 'assets/svg/iconBack.svg'
 import Text from 'components/common/Text'
+import { useRouter } from 'next/router'
+import { styled } from 'styles/globalStitches'
 interface BoardHeaderProps {
   title?: string
 }

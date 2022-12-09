@@ -1,6 +1,7 @@
 import { Stack } from '@mui/system'
 import { useQuery } from '@tanstack/react-query'
 import { fetchQuestions } from 'services'
+
 import QaCard, { QaCardProps } from './QaCard'
 
 const QaCardList = () => {

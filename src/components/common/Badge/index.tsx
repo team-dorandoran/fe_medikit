@@ -1,5 +1,6 @@
 import { CSS } from '@stitches/react'
 import Image from 'next/image'
+
 import Button from '../Button'
 
 interface BadgeProps {

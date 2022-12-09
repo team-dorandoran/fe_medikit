@@ -1,8 +1,9 @@
+import IconBack from 'assets/svg/iconBack.svg'
 import Col from 'components/common/_Grid/Col'
 import { styled } from 'styles/globalStitches'
+
 import RecentKeyWords from './RecentKeyWords'
 import TrendKeyWords from './TrendKeyWords'
-import IconBack from 'assets/svg/iconBack.svg'
 
 const SearchContent = () => {
   return (

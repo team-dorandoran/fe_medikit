@@ -1,10 +1,8 @@
+import Logo from 'assets/svg/logo.svg'
+import Row from 'components/common/_Grid/Row'
 import Link from 'next/link'
 
-import Row from 'components/common/_Grid/Row'
-
 import { styled } from 'styles/globalStitches'
-
-import Logo from 'assets/svg/logo.svg'
 
 const HomeHeader = () => {
   return (

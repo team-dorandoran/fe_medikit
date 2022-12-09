@@ -1,6 +1,6 @@
+import { questions } from '_constants'
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { useRouter } from 'next/router'
-import { questions } from '_constants'
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const router = useRouter()

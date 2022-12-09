@@ -5,10 +5,11 @@ import {
   ReactNode,
   SetStateAction,
 } from 'react'
+
 import * as Accordion from '@radix-ui/react-accordion'
 import { keyframes } from '@stitches/react'
-import { styled } from 'styles/globalStitches'
 import IconCaret from 'assets/svg/iconCaret.svg'
+import { styled } from 'styles/globalStitches'
 
 interface CustomAccordionProps {
   title: string

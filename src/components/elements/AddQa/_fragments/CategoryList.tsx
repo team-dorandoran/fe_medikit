@@ -1,6 +1,8 @@
-import { Stack } from '@mui/system'
 import { Dispatch, SetStateAction } from 'react'
+
+import { Stack } from '@mui/system'
 import { styled } from 'styles/globalStitches'
+
 import { data } from './dummyData'
 
 interface ItemProps {

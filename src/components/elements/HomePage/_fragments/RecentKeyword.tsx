@@ -1,5 +1,6 @@
 import Badge from 'components/common/Badge'
 import Col from 'components/common/_Grid/Col'
+
 import { Title } from './_style'
 
 const RecentKeyword = () => {

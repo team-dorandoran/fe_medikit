@@ -1,12 +1,13 @@
 import { Card, CardContent, Stack } from '@mui/material'
+import IconA from 'assets/svg/iconA.svg'
+import IconHeart from 'assets/svg/iconHeart.svg'
+import IconHeartFilled from 'assets/svg/iconHeartFilled.svg'
+import IconMessage from 'assets/svg/iconMessage.svg'
+import IconQ from 'assets/svg/iconQ.svg'
 import { styled } from 'styles/globalStitches'
+
 import Text from '../Text'
 import Row from '../_Grid/Row'
-import IconMessage from 'assets/svg/iconMessage.svg'
-import IconHeart from 'assets/svg/iconHeart.svg'
-import IconQ from 'assets/svg/iconQ.svg'
-import IconA from 'assets/svg/iconA.svg'
-import IconHeartFilled from 'assets/svg/iconHeartFilled.svg'
 
 export interface QaCardProps {
   category: string

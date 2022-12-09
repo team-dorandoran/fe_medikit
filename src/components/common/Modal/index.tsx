@@ -1,5 +1,6 @@
-import { Card, CardContent, Modal } from '@mui/material'
 import { ReactNode } from 'react'
+
+import { Card, CardContent, Modal } from '@mui/material'
 
 interface ModalProps {
   open: boolean

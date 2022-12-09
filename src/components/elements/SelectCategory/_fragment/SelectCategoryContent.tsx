@@ -1,11 +1,13 @@
+import { ChangeEvent, useRef, useState } from 'react'
+
 import CustomAccordion from 'components/common/Accordion'
 import Button from 'components/common/Button'
 import Text from 'components/common/Text'
 import Col from 'components/common/_Grid/Col'
 import Row from 'components/common/_Grid/Row'
 import TagBox from 'components/elements/AddQa/_fragments/TagBox'
-import { ChangeEvent, useRef, useState } from 'react'
 import { styled } from 'styles/globalStitches'
+
 import PainSpotList from './PainSpotList'
 
 const SelectCategoryContent = () => {
