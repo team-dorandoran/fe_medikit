@@ -3,6 +3,42 @@ import { createStitches } from '@stitches/react'
 export const { getCssText } = createStitches()
 
 export const { styled, css } = createStitches({
+  utils: {
+    // Abbreviated margin properties
+    m: (value: string) => ({
+      margin: value,
+    }),
+    mt: (value: string) => ({
+      marginTop: value,
+    }),
+    mr: (value: string) => ({
+      marginRight: value,
+    }),
+    mb: (value: string) => ({
+      marginBottom: value,
+    }),
+    ml: (value: string) => ({
+      marginLeft: value,
+    }),
+    mx: (value: string) => ({
+      marginLeft: value,
+      marginRight: value,
+    }),
+    my: (value: string) => ({
+      marginTop: value,
+      marginBottom: value,
+    }),
+    size: (value: string) => ({
+      width: value,
+      height: value,
+    }),
+    linearGradient: (value: string) => ({
+      backgroundImage: `linear-gradient(${value})`,
+    }),
+    br: (value: string) => ({
+      borderRadius: value,
+    }),
+  },
   theme: {
     colors: {
       primary: '#429AEB',
