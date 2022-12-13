@@ -2,7 +2,6 @@ import IconA from './iconA.svg'
 import IconAnswer from './iconAnswer.svg'
 import IconBack from './iconBack.svg'
 import IconCaret from './iconCaret.svg'
-import IconClose from './iconClose.svg'
 import IconCloseGray from './iconCloseGray.svg'
 import IconDelete from './iconDelete.svg'
 import IconHeart from './iconHeart.svg'
@@ -21,7 +20,6 @@ export {
   IconAnswer,
   IconBack,
   IconCaret,
-  IconClose,
   IconDelete,
   IconCloseGray,
   IconHeart,
