@@ -1,12 +1,9 @@
-@use "/src/styles/constants/sizes";
-
 .wrapper {
   width: 100%;
   height: auto;
   background-color: gold;
 
   h1 {
-    font-size: sizes.$XXL;
     margin-bottom: 15px;
   }
 }

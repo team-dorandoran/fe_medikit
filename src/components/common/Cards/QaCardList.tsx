@@ -1,12 +1,16 @@
-import { Stack } from '@mui/system';
-import QaCard, { QaCardProps } from "./QaCard";
+import { Stack } from '@mui/system'
+import { useQuery } from '@tanstack/react-query'
+import { fetchQuestions } from 'services'
 
-interface QaCardListProps {
-  qaList: QaCardProps[];
-}
+import QaCard, { QaCardProps } from './QaCard'
 
-const QaCardList = ({ qaList }: QaCardListProps) => {
-  const list = qaList.map(qa => (
+const QaCardList = () => {
+  const { data: questions } = useQuery<QaCardProps[]>(
+    ['questions'],
+    fetchQuestions,
+  )
+
+  const list = questions?.map(qa => (
     <QaCard
       key={qa.question + qa.answer}
       category={qa.category}
@@ -14,10 +18,17 @@ const QaCardList = ({ qaList }: QaCardListProps) => {
       answer={qa.answer}
       answerNum={qa.answerNum}
       likes={qa.likes}
+      isLiked={qa.isLiked}
     />
-  ));
+  ))
 
-  return <Stack spacing={10}>{list}</Stack>;
-};
+  return (
+    <>
+      <Stack style={{ marginTop: '24px' }} spacing={'16px'}>
+        {list}
+      </Stack>
+    </>
+  )
+}
 
-export default QaCardList;
+export default QaCardList

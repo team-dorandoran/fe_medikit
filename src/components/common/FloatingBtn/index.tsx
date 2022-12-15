@@ -1,12 +1,15 @@
-import { AddCircleRounded } from '@mui/icons-material';
-import { Fab } from '@mui/material';
+import { Fab } from '@mui/material'
+import IconWrite from 'assets/svg/iconWrite.svg'
+import Link from 'next/link'
 
 const FloatingBtn = () => {
   return (
-    <Fab color="primary" aria-label="add">
-      <AddCircleRounded />
-    </Fab>
-  );
-};
+    <Link href="/addqa">
+      <Fab color="primary" aria-label="add">
+        <IconWrite />
+      </Fab>
+    </Link>
+  )
+}
 
-export default FloatingBtn;
+export default FloatingBtn

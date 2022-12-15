@@ -1,28 +1,38 @@
-/* eslint-disable object-shorthand */
-import { InputHTMLAttributes, ReactNode } from "react";
-import styles from "./Input.module.scss";
+import IconSearch from 'assets/svg/iconSearch.svg'
+import Link from 'next/link'
+import { styled } from 'styles/globalStitches'
 
-interface Props extends InputHTMLAttributes<HTMLInputElement> {
-  className?: string;
-}
+const SearchBar = () => {
+  const InputWrapper = styled('div', {
+    position: 'relative',
+    display: 'flex',
+    width: '100%',
+    cursor: 'pointer',
+  })
 
-interface InputWrapperProps {
-  sufix?: ReactNode;
-  prefix?: ReactNode;
-}
+  const Search = styled('span', {
+    width: '100%',
+    padding: '9px 20px',
+    borderRadius: '20px',
+    border: '1px solid $primary',
+    color: '$tertiary_text',
+  })
 
-const Input = (props: Props, { prefix, sufix }: InputWrapperProps) => {
-  const { className } = props;
+  const CustomIconSearch = styled(IconSearch, {
+    position: 'absolute',
+    right: '10px',
+    top: '50%',
+    transform: 'translate(-50%, -50%)',
+  })
+
   return (
-    <div className={styles.inputWrapper}>
-      {prefix && prefix}
-      <input
-        {...props}
-        className={`${styles.input} ${className && className}`}
-      />
-      {sufix && sufix}
-    </div>
-  );
-};
+    <Link href="/search">
+      <InputWrapper>
+        <Search>어떻게 아프신가요?</Search>
+        <CustomIconSearch />
+      </InputWrapper>
+    </Link>
+  )
+}
 
-export default Input;
+export default SearchBar
